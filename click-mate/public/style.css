@@ -1,0 +1,21 @@
+button {
+    position: fixed;
+    top: 200px;
+    left: 200px;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    font-family: trebuchet MS;
+    color: white;
+    background: linear-gradient(blue, red);
+    font-size: 15px;
+    border: none;
+    box-shadow: 4px 4px 0px rgb(82, 0, 114);
+    pointer-events: none;
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+    pointer-events: none;
+}
