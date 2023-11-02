@@ -40,5 +40,5 @@ map.C = `((()=>{})[${fromString('constructor')}](${fromString('return escape')})
 
 const compile = code => `(()=>{})[${fromString('constructor')}](${fromString(code)})()`;
 
-console.log(compile('console.log("ctf{Javascript-is-weird-c89bb646-3831-4443-b348-1e623d7eabce}");'));
+console.log(compile('console.log("aetherius{Javascript-is-weird-c89bb646-3831-4443-b348-1e623d7eabce}");'));
 // console.log(compile('let btn = document.createElement("button");btn.innerHTML = "NOTA NOTA NOTA NOTA";btn.id = "item";btn.onclick=function(){alert("ctf{huwehueueheuheu}");};document.body.appendChild(btn);'))

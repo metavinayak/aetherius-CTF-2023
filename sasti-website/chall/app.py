@@ -4,7 +4,7 @@ from flask import Flask, make_response, render_template,render_template_string,r
 app = Flask(__name__)
 @app.route('/')
 def home():
-    response = make_response("<title>SaSTI website 💉</title><form action='/display' method = 'POST'><h3>Input <br> <input type = 'text' name = 'text' style='width: 80%' autofocus/></p><input type = 'submit' value = 'submit' /></h3></form>")
+    response = make_response("<title>SaSTI website</title><form action='/display' method = 'POST'><h3>Input <br> <input type = 'text' name = 'text' style='width: 80%' autofocus/></p><input type = 'submit' value = 'submit' /></h3></form>")
     return response
 
 @app.route('/display', methods = ["POST"])

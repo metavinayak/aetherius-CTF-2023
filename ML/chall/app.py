@@ -15,7 +15,7 @@ def is_valid_uuid(value):
         return True
     except ValueError:
         return False
-
+quote="<div style='text-align:center'>Hi, I'm Chandler, I make jokes when I'm uncomfortable.<br>Can you keep guessing the quadrant(s) I am located? Ofcourse, the best way to do it is manually. No Sarcasm.<br><br>Input format: Python list(including the printed spaces)<br>Eg: [1], [2, 4], [1, 2, 3, 4], etc</div>"
 @app.route('/')
 def home():
     try:
@@ -39,7 +39,8 @@ def page(folder,N):
         quadrant[folder]=db[curr_img]
 
         correct[folder]=0
-        response = make_response("<title>Quadrant games</title><div style='text-align:center'><form action='/"+folder+"/2' method = 'POST'><h3>Input <br> <input type = 'text' name = 'text' style='width: 20%' /></p><input type = 'submit' value = 'submit' /></h3></form><img src='"+"/static/"+curr_img+"'></div>")
+        
+        response = make_response("<title>Quadrant games</title>"+quote+"<div style='text-align:center'><form action='/"+folder+"/2' method = 'POST'><h3>Input <br> <input type = 'text' name = 'text' style='width: 20%' /></p><input type = 'submit' value = 'submit' /></h3></form><img src='"+"/static/"+curr_img+"'></div>")
         return response
     elif(request.method == "POST" and request.form['text']==str(quadrant[folder])):
         
@@ -63,8 +64,8 @@ def page(folder,N):
             return make_response(str(f))
 
         p = str(int(N)+1)
-        response = make_response("<title>Quadrant games</title><div style='text-align:center'><form action='/"+folder+"/"+p+"' method = 'POST'><h3>Input <br> <input type = 'text' name = 'text' style='width: 20%' /></p><input type = 'submit' value = 'submit' /></h3></form><img src='"+"/static/"+curr_img+"'></div>")
-        response.headers['Refresh'] = '15; url=/' # Redirect after x seconds if no response
+        response = make_response("<title>Quadrant games</title>"+quote+"<div style='text-align:center'><form action='/"+folder+"/"+p+"' method = 'POST'><h3>Input <br> <input type = 'text' name = 'text' style='width: 20%' /></p><input type = 'submit' value = 'submit' /></h3></form><img src='"+"/static/"+curr_img+"'></div>")
+        response.headers['Refresh'] = '10; url=/' # Redirect after x seconds if no response
         return response
     else:
         # print()

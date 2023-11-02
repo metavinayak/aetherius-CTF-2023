@@ -1,7 +1,7 @@
 import os
 import math
 import random
-
+import time
 class Expression(object):
     OPS = ['+', '-', '*','%']
 
@@ -43,24 +43,38 @@ def main():
     print('Evaluate the below till you get the flag')
     print('Hint: Don\'t do it manually :)\n')
 
-    solved=1
-    for _ in range(50):
-        # x=str(Expression(5,5))
-        x=str(Expression(5,2))
+    prev = time.time()
 
+    solved=1
+    iters=5
+    for _ in range(iters):
+        # x=str(Expression(5,5))
+        x=str(Expression(5,4))
+        # x="1"
+
+        time_flag=0
         val=eval(x)
         print(x)
         
         try:
             cmd = input('> ').strip()
+            curr = time.time()
+            if((curr-prev)>7):
+                time_flag=1
+                exit()
             if(cmd==str(val)):
                 pass
             else:
                 solved=0
                 exit()
         except:
-            print("Nope")
+            if(time_flag):
+                print("Slow, huh.")
+            else:
+                print("You made a big mistake.")
+            print("I have found you and I have killed you")
             exit()
+        prev=time.time()
     if(solved):
         print(flag)
 
