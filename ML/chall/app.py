@@ -64,7 +64,7 @@ def page(folder,N):
             return make_response(str(f))
 
         p = str(int(N)+1)
-        response = make_response("<title>Quadrant games</title>"+quote+"<div style='text-align:center'><form action='/"+folder+"/"+p+"' method = 'POST'><h3>Input <br> <input type = 'text' name = 'text' style='width: 20%' /></p><input type = 'submit' value = 'submit' /></h3></form><img src='"+"/static/"+curr_img+"'></div>")
+        response = make_response("<title>Quadrant games</title><div style='text-align:center'><form action='/"+folder+"/"+p+"' method = 'POST'><h3>Input <br> <input type = 'text' name = 'text' style='width: 20%' /></p><input type = 'submit' value = 'submit' /></h3></form><img src='"+"/static/"+curr_img+"'></div>")
         response.headers['Refresh'] = '10; url=/' # Redirect after x seconds if no response
         return response
     else:

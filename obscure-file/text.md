@@ -5,6 +5,8 @@ Category:
 OSINT, General Skills
 
 Message:
+"Glory is fleeting, but obscurity is forever"
+
 I found this weird file you might want to look at. Have fun!
 
 Value: 50

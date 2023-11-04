@@ -2,7 +2,7 @@ Name:
 SaSTI website
 
 Category:
-Web
+Web exploitation
 
 Message:
 Kya aap bhi apni website pe user input pe bharosa karte hain?

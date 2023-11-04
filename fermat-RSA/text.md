@@ -1,5 +1,5 @@
 Name:
-RSA
+Weak RSA
 
 Category: Crypto
 
